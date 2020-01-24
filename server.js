@@ -29,4 +29,8 @@ app.get('/api/customers', (req, res) => {
     )
 })
 
+app.post('/api/customers', (req, res) => {
+    res.send({result: 'ok'});
+})
+
 app.listen(port, () => console.log(`Listenong on port ${port}`));
