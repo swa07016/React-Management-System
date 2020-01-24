@@ -89,6 +89,7 @@ class App extends Component {
             <TableBody>
               {this.state.customers ? this.state.customers.map(customer => {
                 return <Customer
+                  stateRefresh={this.stateRefresh}
                   key={customer.id}
                   id={customer.id}
                   image={customer.image}
