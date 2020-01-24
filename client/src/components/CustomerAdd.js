@@ -10,7 +10,8 @@ class CustomerAdd extends React.Component {
       userName: '',
       birthday: '',
       gender: '',
-      job: ''
+      job: '',
+      fileName: ''
     }
     this.handleFormSubmit = this.handleFormSubmit.bind(this)
     this.handleFileChange = this.handleFileChange.bind(this)
@@ -23,6 +24,15 @@ class CustomerAdd extends React.Component {
     this.addCustomer()
     .then((response) => {
       console.log(response.data);
+      this.props.stateRefresh();
+    })
+    this.setState({
+      file: null,
+      userName: '',
+      birthday: '',
+      gender: '',
+      job: '',
+      fileName: ''
     })
   }
 
